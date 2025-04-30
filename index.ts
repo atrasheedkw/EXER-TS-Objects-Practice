@@ -33,6 +33,7 @@ interface movieType {
   // //nested object keys
   // reviewer?: string;
   // comment?: string;
+  [key: string]: string | string[] | number | undefined | object;
 }
 
 // ✅ Task 2: Create a variable named `movie` and assign it an object that matches the Movie interface.
@@ -128,5 +129,7 @@ console.log(`let's test everything`, movie);
 // ✅ Step 1: Modify the interface to allow for index signature so we can add new keys and values
 
 // ✅ Step 2: Add a new key named 'FilmStudio' and the value should be a string (i.e "Paramount", "Pixar"...etc)
-
+movie.filmStudio = "Paramount";
 // ✅ Step 3: Add a new key named 'Cast' and the value should be a string array of the names of the actors in the movie (["Robin Williams", "Ryan Reynolds"])
+movie.cast = ["Robin Williams", "Ryan Reynolds"];
+console.log(`let's check out how the signature index work`, movie);
